@@ -5,7 +5,7 @@
     <artifactId>servlet-practices</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>helloweb</artifactId>
+  <artifactId>emaillist01</artifactId>
   <packaging>war</packaging>
   
   <properties>
@@ -17,7 +17,7 @@
 	</dependencies>
 	
 	<build>
-		<finalName>helloweb</finalName>
+		<finalName>emaillist01</finalName>
 		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
 		<resources>
 			<resource>
@@ -56,4 +56,5 @@
 			</plugin>
 		</plugins>
 	</build>	
+  
 </project>
