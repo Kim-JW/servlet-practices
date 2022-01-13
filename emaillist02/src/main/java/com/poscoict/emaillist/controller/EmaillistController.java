@@ -17,10 +17,14 @@ public class EmaillistController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		
 		String actionName = request.getParameter("a");
+
 		
 		if("form".equals(actionName)){
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/form.jsp");
+			rd.forward(request, response);
 			
 		} else if("add".equals(actionName)){
 			String firstName = request.getParameter("fn");

@@ -13,6 +13,6 @@
 	
 	boolean result = new GuestBookDao().delete(vo);
 	
-	response.sendRedirect("/guestbook01/index.jsp");
+	response.sendRedirect("/guestbook02/index.jsp");
 	
 %>

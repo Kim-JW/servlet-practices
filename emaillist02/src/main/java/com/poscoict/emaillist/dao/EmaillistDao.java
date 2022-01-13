@@ -128,8 +128,6 @@ public class EmaillistDao {
 				e.printStackTrace();
 			}
 		}
-		
-		
 		return result;
 	}
 }

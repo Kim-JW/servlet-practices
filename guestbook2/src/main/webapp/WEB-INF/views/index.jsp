@@ -3,8 +3,7 @@
 <%@page import="com.poscocit.guestbook.dao.GuestBookDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-	GuestBookDao dao = new GuestBookDao();
-	List<GuestBookVo> list = dao.findAll();
+	List<GuestBookVo> list = (List<GuestBookVo>)request.getAttribute("list");
 	int i = 1;
 %>
 
@@ -14,7 +13,7 @@
 <title>방명록</title>
 </head>
 <body>
-	<form action="/guestbook01/add.jsp" method="post">
+	<form action="<%= request.getContextPath()%>/gl?a=add" method="post">
 	<table border=1 width=500>
 		<tr>
 			<td>이름</td><td><input type="text" name="name"></td>
@@ -40,7 +39,7 @@
 			<td>[<%=i++%>]</td>
 			<td><%=vo.getName()%></td>
 			<td><%=vo.getReg_date() %></td>
-			<td><a href="/guestbook01/deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
+			<td><a href="<%= request.getContextPath()%>/gl?a=deleteform&no=<%= vo.getNo()%>">삭제</a></td>
 		</tr>
 		<tr>
 			<td colspan=4><%=vo.getMessage().replaceAll("\n", "<br>") %></td>

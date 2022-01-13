@@ -17,6 +17,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>GuestbookController</servlet-name>
-    <url-pattern>/GuestbookController</url-pattern>
+    <url-pattern>/gl</url-pattern>
   </servlet-mapping>
 </web-app>
