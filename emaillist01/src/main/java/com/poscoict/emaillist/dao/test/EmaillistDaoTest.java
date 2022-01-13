@@ -8,15 +8,29 @@ import com.poscoict.emaillist.vo.EmaillistVo;
 public class EmaillistDaoTest {
 
 	public static void main(String[] args) {
+		//testInsert();
 		testFindAll();
 
 	}
 	
+	private static void testInsert() {
+		EmaillistVo vo = new EmaillistVo();
+		vo.setFirstName("Kimmi");
+		vo.setLastName("Raikonnen");
+		vo.setEmail("kk@gmail.com");
+		
+		boolean result = new EmaillistDao().insert(vo);
+		System.out.println(result ? "success" : "fail");
+		
+	}
+
 	private static void testFindAll() {
 		List<EmaillistVo> list = new EmaillistDao().findAll();
 		for(EmaillistVo vo : list) {
 			System.out.println(vo);
 		}
 	}
+	
+	
 
 }
