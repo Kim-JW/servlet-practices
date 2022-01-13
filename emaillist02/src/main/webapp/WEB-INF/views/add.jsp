@@ -16,5 +16,5 @@
 	
 	boolean result = new EmaillistDao().insert(vo);
 	
-	response.sendRedirect("/emaillist01/index.jsp");
+	response.sendRedirect("/emaillist02/index.jsp");
  %>

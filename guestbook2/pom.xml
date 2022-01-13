@@ -1,36 +1,36 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.poscoict</groupId>
-  <artifactId>servlet-practices</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>helloweb</module>
-  	<module>emaillist01</module>
-  	<module>guestbook01</module>
-  	<module>emaillist02</module>
-  	<module>guestbook02</module>
-  </modules>
+  <parent>
+    <groupId>com.poscoict</groupId>
+    <artifactId>servlet-practices</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>guestbook02</artifactId>
+  <packaging>war</packaging>
   
-  <properties>
+   <properties>
 		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+		<project.reporting.outputEncodnig>utf-8</project.reporting.outputEncodnig>
 	</properties>
 
 	<dependencies>
-	
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.17</version>
+		</dependency>
 	</dependencies>
-	
+
 	<build>
-		<finalName>helloweb</finalName>
+		<finalName>guestbook02</finalName>
 		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
 		<resources>
-		<resource>
-			<directory>${project.basedir}/src/main/resources</directory>
-			<excludes>
-				<exclude>**/*.java</exclude>
-			</excludes>
-		</resource>
+			<resource>
+				<directory>${project.basedir}/src/main/resources</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
 		</resources>
 		<plugins>
 			<plugin>
@@ -47,7 +47,7 @@
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>3.2.0</version>
 				<configuration>
-				<encoding>UTF-8</encoding>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -55,8 +55,8 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.2.1</version>
 				<configuration>
-				<warSourceDirectory>${project.basedir}/src/main/webapp</warSourceDirectory>
-				<failOnMissingWebXml>true</failOnMissingWebXml>
+					<warSourceDirectory>${project.basedir}/src/main/webapp</warSourceDirectory>
+					<failOnMissingWebXml>true</failOnMissingWebXml>
 				</configuration>
 			</plugin>
 		</plugins>
