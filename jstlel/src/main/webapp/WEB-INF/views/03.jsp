@@ -24,6 +24,7 @@
 		
 	<c:forEach items="${list }" var="vo" varStatus="status">
 		  [${count-status.index }] [${status.index }:${status.count }] [${vo.no } : ${vo.name }] <br/>
+		  <br/>
 	</c:forEach>
 </body>
 </html>
