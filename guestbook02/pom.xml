@@ -5,12 +5,12 @@
     <artifactId>servlet-practices</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>guestbook01</artifactId>
+  <artifactId>guestbook02</artifactId>
   <packaging>war</packaging>
   
-  <properties>
+   <properties>
 		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+		<project.reporting.outputEncodnig>utf-8</project.reporting.outputEncodnig>
 	</properties>
 
 	<dependencies>
@@ -33,17 +33,17 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
-		<finalName>guestbook01</finalName>
+		<finalName>guestbook02</finalName>
 		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
 		<resources>
-		<resource>
-			<directory>${project.basedir}/src/main/resources</directory>
-			<excludes>
-				<exclude>**/*.java</exclude>
-			</excludes>
-		</resource>
+			<resource>
+				<directory>${project.basedir}/src/main/resources</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
 		</resources>
 		<plugins>
 			<plugin>
@@ -60,7 +60,7 @@
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>3.2.0</version>
 				<configuration>
-				<encoding>UTF-8</encoding>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -68,11 +68,10 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.2.1</version>
 				<configuration>
-				<warSourceDirectory>${project.basedir}/src/main/webapp</warSourceDirectory>
-				<failOnMissingWebXml>true</failOnMissingWebXml>
+					<warSourceDirectory>${project.basedir}/src/main/webapp</warSourceDirectory>
+					<failOnMissingWebXml>true</failOnMissingWebXml>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-  
 </project>
